@@ -1,0 +1,224 @@
+/* Premium Animation System */
+
+/* Animation Variables */
+:root {
+  --animation-fast: 0.15s;
+  --animation-normal: 0.3s;
+  --animation-slow: 0.5s;
+  --animation-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --animation-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-enter: cubic-bezier(0.16, 1, 0.3, 1);
+  --animation-exit: cubic-bezier(0.7, 0, 0.84, 0);
+}
+
+/* Base Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY3d(0, 20px, 0);
+  transition: all var(--animation-normal) var(--animation-enter);
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY3d(0, 0, 0);
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY3d(0, 40px, 0);
+  transition: all var(--animation-slow) var(--animation-enter);
+}
+
+.slide-up.show {
+  opacity: 1;
+  transform: translateY3d(0, 0, 0);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all var(--animation-normal) var(--animation-enter);
+}
+
+.scale-in.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Staggered Animations */
+.stagger-item {
+  opacity: 0;
+  transform: translateY3d(0, 30px, 0);
+  transition: all var(--animation-normal) var(--animation-enter);
+}
+
+.stagger-item.show {
+  opacity: 1;
+  transform: translateY3d(0, 0, 0);
+}
+
+/* Stagger Delays */
+.stagger-item:nth-child(1) { transition-delay: 0.1s; }
+.stagger-item:nth-child(2) { transition-delay: 0.15s; }
+.stagger-item:nth-child(3) { transition-delay: 0.2s; }
+.stagger-item:nth-child(4) { transition-delay: 0.25s; }
+.stagger-item:nth-child(5) { transition-delay: 0.3s; }
+.stagger-item:nth-child(6) { transition-delay: 0.35s; }
+
+/* Hover Animations */
+.hover-lift {
+  transition: transform var(--animation-fast) var(--animation-smooth);
+}
+
+.hover-lift:hover {
+  transform: translateY3d(0, -2px, 0);
+}
+
+.hover-scale {
+  transition: transform var(--animation-fast) var(--animation-bounce);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-glow {
+  position: relative;
+  transition: all var(--animation-normal) var(--animation-smooth);
+}
+
+.hover-glow::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: var(--gradient-primary);
+  border-radius: inherit;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity var(--animation-normal) var(--animation-smooth);
+}
+
+.hover-glow:hover::before {
+  opacity: 0.3;
+}
+
+/* Loading Animations */
+.loading-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.loading-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Entrance Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY3d(0, 30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX3d(30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX3d(0, 0, 0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Micro-interactions */
+.button-press {
+  transition: transform var(--animation-fast) var(--animation-exit);
+}
+
+.button-press:active {
+  transform: scale(0.95);
+}
+
+.link-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width var(--animation-normal) var(--animation-smooth);
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Scroll Animations */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY3d(0, 50px, 0);
+  transition: all 0.8s var(--animation-enter);
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY3d(0, 0, 0);
+}
+
+/* Performance Optimizations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.reduced-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
