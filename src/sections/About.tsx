@@ -20,9 +20,9 @@ export default function About() {
           <div className="about__card">
             <h3>Highlights</h3>
             <ul className="about__list">
-              <li>✅ Responsive UI & accessibility basics</li>
-              <li>✅ REST APIs + React Query / Axios</li>
-              <li>✅ State management (Redux Toolkit / Zustand)</li>
+              <li>Responsive UI & accessibility basics</li>
+              <li>REST APIs + React Query / Axios</li>
+              <li>State management (Redux Toolkit / Zustand)</li>
             </ul>
           </div>
         </div>

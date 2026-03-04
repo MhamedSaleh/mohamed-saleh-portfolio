@@ -77,32 +77,6 @@
   }
 }
 
-.hero__description {
-  margin-bottom: var(--space-8);
-  color: var(--text-secondary);
-  line-height: var(--leading-relaxed);
-}
-
-.hero__actions {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  align-items: center;
-}
-
-@media (min-width: 640px) {
-  .hero__actions {
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero__actions {
-    justify-content: flex-start;
-  }
-}
-
 /* Hero Visual Elements */
 .hero__visual {
   position: absolute;

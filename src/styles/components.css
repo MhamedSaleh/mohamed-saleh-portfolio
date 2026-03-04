@@ -158,6 +158,8 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-full);
   transition: all 0.2s ease;
+  padding: 10px 20px;
+  font-size: 14px;
 }
 
 /* Tag Sizes */
