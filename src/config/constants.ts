@@ -2,129 +2,191 @@ import type { ContactInfo, SkillGroup, Project } from '../types';
 
 export const CONTACT: ContactInfo = {
   email: "mohamedsaleh@sci.asu.edu.eg",
-  linkedin: "https://www.linkedin.com/in/mohamed-saleh-241483172?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+  linkedin: "https://www.linkedin.com/in/mohamed-saleh-241483172",
 } as const;
 
-export const SKILL_GROUPS: readonly SkillGroup[] = [
+export const SKILL_GROUPS = [
   {
-    title: "Frontend",
-    items: ["React", "TypeScript", "JavaScript", "HTML5", "CSS3"],
+    title: "Frontend Architecture",
+    items: ["React 18", "TypeScript", "Next.js", "State Management (Zustand/Redux)", "Performance Optimization"],
   },
   {
-    title: "Styling",
-    items: ["Tailwind CSS", "SCSS", "CSS Modules", "Responsive Design"],
+    title: "AI & Research",
+    items: ["Python", "PyTorch", "Neural Networks", "EEG Signal Processing", "Feature Extraction"],
   },
   {
-    title: "State & Data",
-    items: ["Redux Toolkit", "Zustand", "React Query", "Axios"],
+    title: "AI-Assisted Development",
+    items: ["Cursor & AI Agents", "MCP (Model Context Protocol)", "Prompt Engineering", "LLM Integration"],
   },
   {
-    title: "Tools",
-    items: ["Git & GitHub", "Vite", "Figma", "ESLint"],
+    title: "CMS & Backend",
+    items: ["PHP", "WordPress (Custom Themes/Plugins)", "OpenCart", "MySQL", "RESTful APIs"],
   },
+  {
+    title: "Modern Styling",
+    items: ["Tailwind CSS", "SASS/SCSS", "Framer Motion", "Atomic Design"],
+  },
+  {
+    title: "Tools & DevOps",
+    items: ["Git/GitHub", "Docker", "Vite/Webpack", "Postman", "Figma"],
+  }
 ] as const;
-
 export const PROJECTS: readonly Project[] = [
   {
     type: "company",
-    title: "Rakaz Real Estate",
-    description: "Complete real estate platform with property listings, search functionality, and comprehensive user interface for property management.",
+    title: "Rakaz Real Estate Platform",
+    description: "A high-performance real estate ecosystem featuring an advanced property booking engine and integrated secure payment gateways. Built with a focus on seamless user experience and type-safe architecture.",
     image: "/projects/rakaz.gif",
-    role: ["Frontend Developer", "UI/UX Designer"],
+    role: ["Frontend Developer", "UI Architect"],
     features: [
-      "Property listings system",
-      "Advanced search & filters",
-      "Responsive property cards",
-      "User dashboard",
-      "Interactive map integration"
+      "Dynamic unit booking & reservation system",
+      "Seamless payment gateway integration",
+      "Advanced geospatial search & filtering",
+      "Real-time availability synchronization",
+      "Custom UI component library via Storybook"
     ],
-    stack: ["React", "TypeScript", "TailwindCSS", "Figma", "Storybook"],
-    github: "https://github.com/YOUR_USERNAME/rakaz",
-    live: "https://YOUR_USERNAME.vercel.app/rakaz-demo"
+    stack: ["React", "TypeScript", "TailwindCSS", "Redux Toolkit", "Axios"],
+    live: "https://pub.rh.net.sa/front/rakaz/"
   },
   {
     type: "company",
     title: "Rakaz Analytics Dashboard",
-    description: "Real estate analytics dashboard for Rakaz with comprehensive property data visualization, market trends, and administrative reporting tools.",
+    description: "An enterprise-grade administrative dashboard for managing real estate operations, sales analytics, and unit inventory with complex data visualization.",
     image: "/projects/rakazDash.gif",
-    role: ["Frontend Developer", "UI Designer"],
+    role: ["Lead Frontend Developer"],
     features: [
-      "Property analytics dashboard",
-      "Market trend visualization",
-      "Real estate reporting",
-      "Interactive data charts",
-      "Performance metrics"
+      "Interactive sales & market trend charts",
+      "Unit inventory & status management",
+      "Financial reporting & transaction tracking",
+      "Role-based access control (RBAC)",
+      "Performance-optimized data tables"
     ],
     stack: ["React", "TypeScript", "Chart.js", "TailwindCSS", "Vite"],
-    github: "https://github.com/YOUR_USERNAME/rakazdash",
-    live: "https://YOUR_USERNAME.vercel.app/rakazdash-demo"
   },
   {
     type: "company",
-    title: "Future Academy Platform",
-    description: "Complete educational platform for Future Academy with course management, student enrollment, and comprehensive learning interface.",
+    title: "Future Academy LMS",
+    description: "A comprehensive Learning Management System (LMS) featuring automated enrollment, interactive testing engines, and integrated real-time communication channels.",
     image: "/projects/futureAcademy.gif",
     role: ["Frontend Developer"],
     features: [
-      "Course management system",
-      "Student enrollment interface",
-      "Learning progress tracking",
-      "Educational content display",
-      "Interactive learning tools"
+      "End-to-end course booking & payment flow",
+      "Interactive quiz engine with instant grading",
+      "Real-time student-instructor chat system",
+      "Course progress tracking & certifications",
+      "Immersive video learning interface"
     ],
-    stack: ["React", "TypeScript", "CSS3", "Vite", "Git"],
-    github: "https://github.com/YOUR_USERNAME/futureacademy",
-    live: "https://YOUR_USERNAME.vercel.app/futureacademy-demo"
+    stack: ["React", "TypeScript", "TailwindCSS", "React Router", "Vite"],
+    live: "https://pub.rh.net.sa/front/eduvate/"
   },
   {
     type: "company",
-    title: "Future Academy Analytics",
-    description: "Educational analytics dashboard for Future Academy with student performance tracking, course analytics, and comprehensive administrative reporting.",
+    title: "Future Academy Analytics Dashboard",
+    description: "Dual-interface analytics ecosystem providing tailored dashboards for both Instructors and Administrators to monitor academic performance.",
     image: "/projects/FutureAcademyDash.gif",
     role: ["Frontend Developer"],
     features: [
-      "Student performance analytics",
-      "Course engagement metrics",
-      "Educational data visualization",
-      "Administrative reporting tools",
-      "Real-time learning insights"
+      "Multi-tenant dashboard (Admin & Instructor)",
+      "Student performance & engagement metrics",
+      "Financial revenue tracking & reports",
+      "Assignment & exam result analytics",
+      "Automated notification & scheduling system"
     ],
-    stack: ["React", "TypeScript", "Chart.js", "CSS3", "Vite"],
-    github: "https://github.com/YOUR_USERNAME/futureacademydash",
-    live: "https://YOUR_USERNAME.vercel.app/futureacademydash-demo"
+    stack: ["React", "TypeScript", "Chart.js", "CSS Modules", "Vite"],
   },
   {
-    type: "personal",
-    title: "Saad Portfolio",
-    description: "Personal portfolio website showcasing frontend development skills with modern React architecture, responsive design, and interactive components.",
+    type: "company",
+    title: "Saad Group Healthcare",
+    description: "A professional medical portal allowing patients to access published reports and medical data, synchronized with a robust internal management system.",
     image: "/projects/saadGroup.gif",
     role: ["Frontend Developer"],
     features: [
-      "Portfolio showcase system",
-      "Project galleries",
-      "Interactive animations",
-      "Contact forms",
-      "Responsive design"
+      "Secure patient portal for report access",
+      "Dynamic medical information display",
+      "Mobile-first responsive healthcare UI",
+      "Public-facing services & doctor profiles",
+      "Real-time announcement & news system"
     ],
-    stack: ["React", "TypeScript", "CSS3", "Vite", "Git"],
-    github: "https://github.com/YOUR_USERNAME/saad",
-    live: "https://YOUR_USERNAME.vercel.app/saad-demo"
+    stack: ["React", "TypeScript", "TailwindCSS", "Vite", "Git"],
+    live: "https://pub.rh.net.sa/front/saadgroup/"
   },
   {
-    type: "personal",
-    title: "Saad Analytics Dashboard",
-    description: "Personal analytics dashboard with real-time data visualization, custom metrics tracking, and modern frontend development patterns.",
+    type: "company",
+    title: "Saad Healthcare Dashboard",
+    description: "An advanced Hospital Management Dashboard designed for generating medical reports, statistical analytics, and patient data monitoring.",
     image: "/projects/saadGroupDash.gif",
     role: ["Frontend Developer"],
     features: [
-      "Personal analytics dashboard",
-      "Custom data visualization",
-      "Real-time metrics display",
-      "Interactive charts",
-      "Performance monitoring"
+      "Medical report generation engine",
+      "Department-wise statistical analytics",
+      "Patient record & history management",
+      "Interactive data visualization for clinics",
+      "Encrypted data handling & secure login"
     ],
     stack: ["React", "TypeScript", "Chart.js", "CSS3", "Vite"],
-    github: "https://github.com/YOUR_USERNAME/saaddash",
-    live: "https://YOUR_USERNAME.vercel.app/saaddash-demo"
+  },
+  {
+    type: "personal",
+    title: "Diaar Real Estate UI",
+    description: "A modern React-based property showcase project focusing on optimized state management and fluid UI animations using Zustand.",
+    image: "/projects/diaar.gif",
+    role: ["Frontend Developer", "UI Designer"],
+    features: [
+      "Lightweight state management via Zustand",
+      "Advanced filtering with zero-latency UI",
+      "Dynamic property detail visualization",
+      "Smooth layout transitions & animations",
+      "Component-driven architecture"
+    ],
+    stack: ["React", "TypeScript", "TailwindCSS", "Zustand", "Vite"],
+    live: "https://diaar-demo.vercel.app"
+  },
+  {
+    type: "personal",
+    title: "Yanbaa Academy & Events",
+    description: "An innovative platform for managing educational events and academy programs with a focus on asynchronous data fetching.",
+    image: "/projects/yanbaa.gif",
+    role: ["Frontend Developer", "UI/UX Designer"],
+    features: [
+      "Event registration & management system",
+      "Async data handling via React Query",
+      "Interactive academic calendars",
+      "Modern educational UI patterns",
+      "Program-specific dashboard views"
+    ],
+    stack: ["React", "TypeScript", "TailwindCSS", "React Query", "Vite"],
+    live: "https://yanbaa-demo.vercel.app"
+  },
+  {
+    type: "company",
+    title: "Dor Omran Real Estate",
+    description: "A premium WordPress-based real estate platform with custom PHP logic for property unit bookings and elegant listings.",
+    image: "/projects/Omran.gif",
+    role: ["WordPress Developer"],
+    features: [
+      "Custom unit booking integration",
+      "Advanced property search (PHP/MySQL)",
+      "Highly optimized corporate SEO",
+      "Custom ACF-driven data structure",
+      "Lead generation & inquiry system"
+    ],
+    stack: ["WordPress", "PHP", "JavaScript", "MySQL", "CSS3"],
+    live: "https://demo2.rh.net.sa/em7/Dor-Omran/"
+  },
+  {
+    type: "company",
+    title: "VitaCare Health Solution",
+    description: "A comprehensive healthcare WordPress platform built for medical services showcase and automated doctor appointment booking.",
+    image: "/projects/Vita.gif",
+    role: ["WordPress Developer"],
+    features: [
+      "Automated doctor appointment system",
+      "Medical service directory & profiles",
+      "Mobile-optimized patient experience",
+      "Performance-tuned CMS architecture",
+      "Secure patient inquiry management"
+    ],
+    stack: ["WordPress", "PHP", "JavaScript", "MySQL", "CSS3"],
+    live: "https://demo2.rh.net.sa/em7/VitaCare/"
   }
 ] as const;
