@@ -1,4 +1,4 @@
-import type { ContactInfo, SkillGroup, Project } from '../types';
+import type { ContactInfo, Project } from '../types';
 
 export const CONTACT: ContactInfo = {
   email: "mohamedsaleh@sci.asu.edu.eg",
